@@ -25,7 +25,7 @@ const Home = ({setSelectedPage}: Props) => {
                 {/* HEADINGS */}
                 <motion.div className='md:-mt-20' initial="hidden" whileInView="visible" viewport={{once: true, amount: 0.5}} transition={{duration: 1}} variants={{hidden: {opacity: 0, x: -50}, visible: {opacity: 1, x: 0}}}>
                     <div className='relative'>
-                        <div className='before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext '>
+                        <div className='before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext'>
                             <img src={HomePageText} alt="home-page-text" />
                         </div>
                     </div>
@@ -36,7 +36,7 @@ const Home = ({setSelectedPage}: Props) => {
                 </p>
                 </motion.div>
                 {/* ACTIONS */}
-                <motion.div className='mt-8 flex items-center gap-8' initial="hidden" whileInView="visible" viewport={{once: true, amount: 0.5}} transition={{delay: 0.5,duration: 1}} variants={{hidden: {opacity: 0, x: -50}, visible: {opacity: 1, x: 0}}}>
+                <motion.div className='mt-8 flex items-center gap-8' initial="hidden" whileInView="visible" viewport={{once: true, amount: 0.5}} transition={{delay: 0.5,duration: 1}} variants={{hidden: {opacity: 0, x: -50}, visible: {opacity: 1, x: 0},}}>
                     <ActionButton setSelectedPage={setSelectedPage}>Join Now</ActionButton>
                     <AnchorLink className='text-sm font-bold text-primary-500 underline hover:text-secondary-500' onClick={() => setSelectedPage(SelectedPage.ContactUs)} href={`#${SelectedPage.ContactUs}`}>
                         <p>Learn More</p>
